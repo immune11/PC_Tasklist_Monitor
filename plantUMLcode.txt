@@ -1,0 +1,27 @@
+Application *-- ApplicationClassification
+Application *-- Telegram
+Application *-- TaskLists
+
+Application : run()
+
+Telegram : Tasklist
+Telegram : taskDetail
+Telegram : task
+Telegram : getType
+Telegram : setTypes
+Telegram : addType
+Telegram : removeType
+Telegram : getInfoByType
+
+ApplicationClassification : __init__()
+ApplicationClassification : refreshStorage()
+ApplicationClassification : setClassification(self,name,classifictionList)
+ApplicationClassification : addClassification(self,name,classifiction)
+ApplicationClassification : removeClassification(self,name,classifiction)
+ApplicationClassification : clearItem(self,name)
+ApplicationClassification : resetClassifiction(self,name)
+ApplicationClassification : getAppListByType(self,classification)
+ApplicationClassification : refreshRunningInfo(self)
+
+TaskLists : refresh()
+TaskLists : refreshAll()
